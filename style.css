@@ -15,7 +15,14 @@ body{
     font-size: xxx-large;
     
 }
-
+#heading-flex {
+    text-align: center;
+    display: inline-block;
+    color: white;
+    font-size: xxx-large;
+    position: relative;
+    left: 150px;
+}
 #heading span {    
     font-weight: 900;
 }
@@ -52,6 +59,25 @@ body{
 }
 
 #btnAddField-outer i{
+    color: rgb(122, 216, 216);
+
+}
+#btnAddField-outer-back {
+    font-size: x-large;
+    float: left;
+    margin-left: 50px;
+    border: none;
+    display: none;
+    background-color: black;
+    background-color: black;
+    color: wheat;
+    /* FONT-VARIANT: JIS04; */
+    width: fit-content;
+    width: -moz-fit-content;
+    height: 55px;   
+}
+
+#btnAddField-outer-back i{
     color: rgb(122, 216, 216);
 
 }
@@ -269,4 +295,22 @@ ol{
 
 #hader-flex-container{
     justify-content: center;
+}
+
+#showData{
+    display: none;
+}
+
+
+@media (min-width: 360px) and (max-width: 720px){
+    
+    .felx-container {
+        flex-direction: column;
+        justify-items: center;
+        justify-content: space-evenly;
+        padding: 30px;
+    }
+
+
+
 }

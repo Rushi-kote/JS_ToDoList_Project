@@ -6,24 +6,43 @@ let list       = document.getElementsByClassName("list");
 let btnAddFieldOuter = document.getElementById("btnAddField-outer");
 let addTaskField = document.getElementById("addTaskField");
 let btnCancelFieldOuter = document.getElementById("btnCancelField-outer");
+let headingFlex = document.getElementById("heading-flex");
+let btnAddFieldOuterBack =document.getElementById("btnAddField-outer-back");
 var index=999;
 let childrens =1;
 let flag =false;
 // debugger;
+// let removingID =null;
 let arrobj=[];
 let mini =[];
-
+btnAddFieldOuterBack.addEventListener("click",function(){
+    flag=false;
+    btnAddFieldOuterBack.style.display ="none";
+    headingFlex.style.display = "none";
+    container.style.justifyContent="space-between";
+    heading.style.display="inline-block";
+    for(let i=0;i<arrobj.length;i++){
+        arrobj[i].style.display="inline-block";
+    }
+});
 btnAddFieldOuter.addEventListener("click",function(){
     document.getElementById("blur").style.cssText=`opacity: 0.7;filter: blur(2px);`;
     addTaskField.style.display="inline-block";
-});
-
-addButton.addEventListener("click",function(){
     if(flag==true){  /// we are in the index2 page
         // code to redirect from index2 page to index page...
         flag=false;
-        window.location.href = 'index.html';
+        btnAddFieldOuterBack.style.display ="none";
+        headingFlex.style.display = "none";
+        container.style.justifyContent="space-between";
+        heading.style.display="inline-block";
+        for(let i=0;i<arrobj.length;i++){
+            arrobj[i].style.display="inline-block";
+        }
     }
+});
+
+addButton.addEventListener("click",function(){
+
 
     let uniId = Date.now();
     let flexItems = document.createElement("div");
@@ -49,6 +68,7 @@ addButton.addEventListener("click",function(){
     arrobj.push(flexItems);
     
     for(let i=0;i<arrobj.length;i++){
+        // console.log("arrobj",arrobj[i]);
         container.appendChild(arrobj[i]);
     }
 
@@ -59,10 +79,38 @@ addButton.addEventListener("click",function(){
  
     flexItemsHeading.addEventListener("click",function(event){
         flag=true;
-        // event.target.parentElement.style.cssText=
-        // `backdrop-filter: blur(5px);`;
-        window.location.href = 'index2.html';
-        let passingID = event.target.parentElement.id;
+        // container.style.display="none";
+        // console.log("outside",arrobj);
+        // let showData = document.getElementById("showData");
+        // showData.style.display = "inline-block";
+        // showData.appendChild(event.target.parentElement);
+        // removingID = event.target.parentElement.id;
+        // (function(childElement){
+        //     setTimeout(function(){
+                
+        //         showData.removeChild(childElement);
+        //         console.log("inside",showData.childNodes);
+        //         showData.style.display = "none";
+        //         for(let i=0;i<arrobj.length;i++){
+        //             container.appendChild(arrobj[i]);
+        //         }
+        //         container.style.display="flex";
+        //     },10000);
+        // })(event.target.parentElement);
+        container.style.justifyContent="center";
+        btnAddFieldOuterBack.style.display ="inline-block";
+        let currentID= event.target.parentElement.id;
+        headingFlex.innerText= event.target.innerText;
+        heading.style.display="none";
+        for(let i=0;i<arrobj.length;i++){
+            if(arrobj[i].id==currentID){
+                continue;
+            }else{
+                arrobj[i].style.display="none";
+            }
+        }
+
+
     });
     let addbtn = document.getElementById(childrens);
     addbtn.addEventListener("click",function(event){
@@ -74,15 +122,7 @@ addButton.addEventListener("click",function(){
         if(event.target.parentElement.tagName=="BUTTON" && event.target.parentElement.innerHTML==addBtnstr){
             console.log("event.target.parentElement.parentElement.id ",event.target.parentElement.parentElement.id);
             let li = document.createElement("li");
-            // let index = list[event.target.parentElement.parentElement.id-1].children.length;
-            // console.log("index ",index);
-            // li.innerHTML = `<span class="span">${inputFieldFlex.value}</span> <button id=${index}>Mark complete</button>`;
 
-            // li.innerText=inputFieldFlex.value;
-            // list[event.target.parentElement.parentElement.id-1].appendChild(li);
-
-            // debugger;
-            // // testAdd(event);
             let addTaskFieldFlex = document.getElementById("addTaskField-flex");
             
             addTaskFieldFlex.style.display="inline-block";
