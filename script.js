@@ -128,6 +128,7 @@ addButton.addEventListener("click",function(){
             addTaskFieldFlex.style.display="inline-block";
             
             let btnAddFieldFlex = document.getElementById("btnAddField-Flex");
+            let btnCancelFieldFlex = document.getElementById("btnCancelField-Flex");
             console.log(event.target.parentElement.parentElement.id);
             mini.push(event.target.parentElement.parentElement.id-1);
             btnAddFieldFlex.addEventListener("click",function(){
@@ -151,6 +152,10 @@ addButton.addEventListener("click",function(){
 
                             return;
                 });
+            });
+
+            btnCancelFieldFlex.addEventListener("click",function(){
+                addTaskFieldFlex.style.display="none";
             });
 
             
