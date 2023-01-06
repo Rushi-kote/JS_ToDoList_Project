@@ -1,0 +1,272 @@
+body{
+    background-color: black;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+#header{
+ height: 85px;
+}
+
+#heading{
+    text-align: center;
+    display: inline-block;
+    color: white;
+    font-size: xxx-large;
+    
+}
+
+#heading span {    
+    font-weight: 900;
+}
+
+#Task-heading{
+    margin: 0 auto;
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+    display: inline-block;
+    color: white;
+    font-size: xx-large;
+}
+
+.header-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+#btnAddField-outer {
+    font-size: x-large;
+    float: right;
+    margin-right: 50px;
+    border: none;
+    background-color: black;
+    background-color: black;
+    color: wheat;
+    /* FONT-VARIANT: JIS04; */
+    width: fit-content;
+    width: -moz-fit-content;
+    height: 55px;   
+}
+
+#btnAddField-outer i{
+    color: rgb(122, 216, 216);
+
+}
+
+#backbtn{
+    font-size: x-large;
+    float: left;
+    /* margin-right: 50px; */
+    border: none;
+    background-color: black;
+    color: wheat;
+    /* FONT-VARIANT: JIS04; */
+    width: fit-content;
+    width: -moz-fit-content;
+    height: 55px;   
+}
+#backbtn i{
+    color: rgb(122, 216, 216);
+    /* height: 24px;
+    width: 24px; */
+    background-color: red;
+}
+
+
+#addTaskField {
+    top: 200px;
+    left: 580px;
+    position: absolute;
+    display: none;
+    background-color: white;
+    text-align: center;
+    border: solid 1px black;
+    height: 150px;
+    width: 300px;
+    border-radius: 10px;
+    line-height: 40px;
+}
+
+#headingtxt {
+    height: 35px;
+    width: 100%;
+    text-align: center;
+    font-size: x-large;
+    font-weight: 700;
+    padding-top: 13px;
+    color: red;
+}
+
+#addTaskField button {
+    height: 25px;
+    width: 82px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: tomato;
+    color: white;
+    font-size: medium;
+    font-weight: 600;
+}
+
+#addTaskField button:hover {
+    box-shadow: 2px 1px 2px gray;
+}
+
+#addTaskField input {
+    width: 200px;
+    height: 25px;
+    border-radius: 10px;
+}
+
+#addTaskField input:hover {
+    box-shadow: 2px 1px 2px gray;
+}
+
+#flex-container{
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.flex-items{
+    border: 1px solid gray;
+    border-radius: 10px;
+    width: 250px;
+    background-color: white;
+}
+
+.flex-items-heading{
+    /* border: 1px solid gray;
+    border-radius: 10px; */
+    width: 100%;
+    text-align: center; 
+    color: tomato;
+    font-size: larger;
+}
+
+.flex-items-taskList{
+    /* border: 1px solid gray;
+    border-radius: 10px; */
+    width: 100%;
+    text-align: center; 
+    height: 100px;    
+}
+
+#TaskListHr{
+    background-color: coral;
+    height: 1px;
+    border: none;
+}
+
+.flex-items-footer{
+    /* border: 1px solid gray;
+    border-radius: 10px; */
+    width: 100%;
+    height: 26px;
+    text-align: right; 
+    margin-right: 2px;
+}
+
+.flex-items-footer button {
+    height: 20px;
+    border: none;
+    background-color: white;
+    font-size: larger;
+    border-radius: 10px;
+}
+
+#ioField{
+    top: 200px;
+    left: 580px;
+    position: absolute;
+    display: none;
+}
+
+#addTaskField-flex{
+    top: 200px;
+    left: 580px;
+    position: absolute;
+    display: none;
+    background-color: white;
+    text-align: center;
+    border: solid 1px black;
+    height: 150px;
+    width: 300px;
+    border-radius: 10px;
+    line-height: 40px;
+}
+
+#headingtxt-flex {
+    height: 35px;
+    width: 100%;
+    text-align: center;
+    font-size: x-large;
+    font-weight: 700;
+    padding-top: 13px;
+    color: red;
+}
+
+
+#addTaskField-flex button:hover {
+    box-shadow: 2px 1px 2px gray;
+}
+
+#addTaskField-flex input {
+    width: 200px;
+    height: 25px;
+    border-radius: 10px;
+}
+
+#addTaskField-flex input:hover {
+    box-shadow: 2px 1px 2px gray;
+}
+
+#addTaskField-flex button {
+    height: 25px;
+    width: 82px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: tomato;
+    color: white;
+    font-size: medium;
+    font-weight: 600;
+}
+
+#noItems {
+    color: white;
+    height: 49px;
+    font-size: x-large;
+    /* position: relative; */
+    display: none;
+
+}
+.add{
+    color: rgb(103, 163, 231);
+}
+
+.delete{
+    color: red;
+}
+
+ol{
+    list-style-type: none;
+    text-align: center;
+}
+
+/* .transition{
+    height: 200px;
+    width: 200px;
+
+} */
+
+#hader-flex-container{
+    justify-content: center;
+}
