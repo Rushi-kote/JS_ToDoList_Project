@@ -5,7 +5,12 @@ body{
 }
 
 #header{
- height: 85px;
+    height: 85px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
 }
 
 #heading{
@@ -20,11 +25,15 @@ body{
     display: inline-block;
     color: white;
     font-size: xxx-large;
-    position: relative;
-    left: 150px;
+    /* position: relative;
+    left: 150px; */
 }
 #heading span {    
     font-weight: 900;
+}
+
+#tasktxt{
+    color: cornflowerblue;
 }
 
 #Task-heading{
@@ -46,8 +55,8 @@ body{
 
 #btnAddField-outer {
     font-size: x-large;
-    float: right;
-    margin-right: 50px;
+    /* float: right;
+    margin-right: 50px; */
     border: none;
     background-color: black;
     background-color: black;
@@ -114,6 +123,7 @@ body{
     width: 300px;
     border-radius: 10px;
     line-height: 40px;
+
 }
 
 #headingtxt {

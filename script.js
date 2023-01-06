@@ -159,6 +159,7 @@ addButton.addEventListener("click",function(){
             for(let i=0;i<arrobj.length;i++){
                 if(event.target.parentElement.parentElement.parentElement.id==arrobj[i].id){
                     arrobj.splice(i,1);
+                    headingFlex.innerText= " ";
                     break;
                 }
             }
